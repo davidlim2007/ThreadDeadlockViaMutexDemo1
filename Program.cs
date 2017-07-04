@@ -100,6 +100,12 @@ namespace ThreadDeadlockViaMutexDemo01
 
         private static Thread m_thread_01 = null;
         private static Thread m_thread_02 = null;
+
+        // Note: This variant of the Mutex constructor takes in
+        // a bool value indicating whether or not the calling
+        // thread should claim ownership of the Mutex.
+        //
+        // In our case, we set it to false.
         private static Mutex m_mutex_01 = new Mutex(false);
         private static Mutex m_mutex_02 = new Mutex(false);
     }
